@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-custom{
+  max-width:1400px;
+  margin:auto;
+  padding-left:40px;
+  padding-right:40px;
+}
+.container-custom {
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #06b6d4 !important;
+}
