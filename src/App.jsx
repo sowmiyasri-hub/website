@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
+
+import Home from "./Pages/Home";
+import Gallery from "./Pages/Gallery";
 import PoolEngineering from "./Pages/PoolEngineering";
 import PoolCare from "./Pages/PoolCare";
 import PoolShop from "./Pages/PoolShop";
 import Contact from "./Pages/Contact";
-
-
 
 function App() {
   return (
@@ -17,10 +16,10 @@ function App() {
         <Route path="/pool-engineering" element={<PoolEngineering />} />
         <Route path="/pool-care" element={<PoolCare />} />
         <Route path="/pool-shop" element={<PoolShop />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
-} 
+}
 
 export default App;
