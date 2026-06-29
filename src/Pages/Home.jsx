@@ -7,7 +7,7 @@ import StatsCounter from "../Components/Stats";
 import GalleryPreview from "../Components/GalleryPreview";
 import Footer from "../Components/Footer";
 import Section2 from "../Components/Section2";
-import Divisions from "../Components/divisions";
+import Divisions from "../Components/Divisions";
 import Projects from "../Components/Projects";
 import Clients from "../Components/Clients";
 import CTA from "../Components/CTA";
