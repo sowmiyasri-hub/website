@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import { GalleryImages } from "../data/GalleryData";
+import { galleryImages } from "../Data/GalleryData";
 import { motion } from "framer-motion";
 import { FaArrowLeft } from "react-icons/fa";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useState } from "react";
 import MasonryGallery from "./MasonryGallery";
+
+
 function GalleryGrid() {
   const { category } = useParams();
 
@@ -65,7 +67,11 @@ function GalleryGrid() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 <MasonryGallery images={images} />
-          {images.map((image, i) => (
+
+
+
+
+          {/* {images.map((image, i) => (
 
             <motion.div
 
@@ -104,7 +110,8 @@ function GalleryGrid() {
 
             </motion.div>
 
-          ))}
+          ))} */}
+
 
         </div>
 
