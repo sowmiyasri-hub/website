@@ -9,6 +9,8 @@ function ContactMap() {
         height="100%"
         style={{ border: 0 }}
         loading="lazy"
+        allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
     </div>

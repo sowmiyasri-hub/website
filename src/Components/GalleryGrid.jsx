@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { galleryImages } from "../data/galleryData";
+import { GalleryImages } from "../data/GalleryData";
 import { motion } from "framer-motion";
 import { FaArrowLeft } from "react-icons/fa";
 import Lightbox from "yet-another-react-lightbox";

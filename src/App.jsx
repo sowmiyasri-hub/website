@@ -12,6 +12,7 @@ import Terms from "./Pages/Terms";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 
+
 function App() {
   return (
     <BrowserRouter>
