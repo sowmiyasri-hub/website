@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { galleryCategories } from "../data/galleryData";
+import { galleryCategories } from "../Data/GalleryData";
 import { FaArrowRight } from "react-icons/fa";
 
 function GalleryCategories() {
