@@ -13,7 +13,7 @@ import Clients from "../Components/Clients";
 import CTA from "../Components/CTA";
 
 function Home() {
-  return (
+  return ( 
     <>
       <Navbar />  
       <Hero />

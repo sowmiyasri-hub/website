@@ -19,43 +19,36 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const formData = new FormData();
+
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone);
+    formData.append("projectType", form.project);
+    formData.append("message", form.message);
+
     try {
- const response = await fetch(
-  "https://menspoolwebsite-917433456.development.catalystserverless.com/server/submitEnquiry",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      Name: form.name,
-      Email: form.email,
-      Phone_Number: form.phone,
-      Project_Type: form.project,
-      Message: form.message,
-    }),
-  }
-);
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzs7zLs1k2TxrOmaP0n8K-ke-GR6k96HMfgL7eVP7M5CmD6KSGSSNBffyCJgd9pK6k/exec",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        }
+      );
 
-const result = await response.json();
-console.log(result);
+      alert("Enquiry Submitted Successfully!");
 
-      if (result.success) {
-        alert("Enquiry Submitted Successfully!");
-
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          project: "",
-          message: "",
-        });
-      } else {
-        alert(result.message || "Submission Failed");
-      }
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        project: "",
+        message: "",
+      });
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      alert("Failed to submit");
     }
   };
 

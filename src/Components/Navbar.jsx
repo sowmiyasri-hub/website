@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 function Navbar() {
-
+  const [serviceOpen, setServiceOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -51,12 +52,46 @@ function Navbar() {
           </li>
 
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/About">About</Link>
           </li>
 
-          <li>
+          <li className="relative group">
+  <button className="flex items-center gap-1 hover:text-cyan-500">
+    Services
+    <ChevronDown size={16} />
+  </button>
+
+  <div className="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
+    <div className="w-64 bg-white rounded-xl shadow-2xl border overflow-hidden">
+
+      <Link
+        to="/pool-engineering"
+        className="block px-6 py-4 text-gray-700 hover:bg-cyan-500 hover:text-white"
+      >
+        Pool Engineering
+      </Link>
+
+      <Link
+        to="/pool-care"
+        className="block px-6 py-4 text-gray-700 hover:bg-cyan-500 hover:text-white"
+      >
+        Pool Care
+      </Link>
+
+      <Link
+        to="/pool-shop"
+        className="block px-6 py-4 text-gray-700 hover:bg-cyan-500 hover:text-white"
+      >
+        Pool Shop
+      </Link>
+
+    </div>
+  </div>
+
+</li>
+          {/* <li>
             <Link to="/projects">Projects</Link>
-          </li>
+          </li> */}
 
           <li>
             <Link to="/gallery">Gallery</Link>

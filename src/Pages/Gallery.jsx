@@ -1,9 +1,21 @@
-function GalleryPreview() {
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+
+import GalleryHero from "../Components/GalleryHero";
+import GalleryCategories from "../Components/GalleryCategories";
+
+function Gallery() {
   return (
-    <section>
-      <h2>Gallery Preview</h2>
-    </section>
+    <>
+      <Navbar />
+
+      <GalleryHero />
+
+      <GalleryCategories />
+
+      <Footer />
+    </>
   );
 }
 
-export default GalleryPreview;
+export default Gallery;

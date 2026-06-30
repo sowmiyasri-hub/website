@@ -164,29 +164,47 @@ function Footer() {
 
       {/* Bottom */}
 
-      <div className="border-t border-white/10">
 
-        <div className="container-custom py-6 flex flex-col lg:flex-row justify-between items-center">
+<div className="border-t border-white/10 mt-16 pt-8">
 
-          <p className="text-white/60">
-            © 2026 Menspool. All Rights Reserved.
-          </p>
+  <div className="max-w-7xl mx-auto px-6">
 
-          <div className="flex gap-8 mt-4 lg:mt-0">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-5">
 
-            <a href="#" className="text-white/60 hover:text-cyan-400">
-              Privacy Policy
-            </a>
+      {/* Left */}
 
-            <a href="#" className="text-white/60 hover:text-cyan-400">
-              Terms & Conditions
-            </a>
+      <p className="text-white/60 text-sm">
+        © {new Date().getFullYear()} Menspool (Singapore) Pte Ltd.
+        All Rights Reserved.
+      </p>
 
-          </div>
+      {/* Right */}
 
-        </div>
+     <div className="flex items-center gap-5 py-5">
 
-      </div>
+<Link
+  to="/privacy-policy"
+  className="text-white/60 hover:text-cyan-400 transition"
+>
+  Privacy Policy
+</Link>
+
+  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+
+  <Link
+    to="/terms"
+    className="text-white/60 hover:text-cyan-400 transition"
+  >
+    Terms & Conditions
+  </Link>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>
 
     </footer>
   );
